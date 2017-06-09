@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css" />
+</head>
+<body style="width: 100%;height: 1200px;" ng-app="app" ng-controller="ExampleController">
+
+	<button id="openModalBtn" type="button" class="btn btn-primary" ng-click="openModal()">Open Modal</button>
+
+	<div id="customerModal" class="modal fade">
+		
+		<div class="modal-dialog">
+
+			<div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Customer</h4>
+		      </div>
+		      <div class="modal-body">
+				 <form reset-directive="customerData" name="form">
+				 	<div class="form-group">
+				 		<label for="#">First Name</label>
+				 		<input class="form-control" type="text" ng-model="customerData.firstname" />
+				 	</div>
+
+				 	<div class="form-group">
+				 		<label for="#">Lastname Name</label>
+				 		<input class="form-control" type="text" ng-model="customerData.lastname" />
+				 	</div>
+			    </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+			
+		</div> <!-- <div class="modal-dialog"> -->
+
+	</div> <!-- <div class="modal fade"> -->
+
+
+	<script type="text/javascript" src="js/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+
+	<!-- app.js -->
+	<script type="text/javascript" src="app/app.js"></script>
+
+	<!-- controllers -->
+	<script type="text/javascript" src="app/controllers/example-ctrl.js"></script>
+
+	<!-- services -->
+	<script type="text/javascript" src="app/services/example-service.js"></script>
+
+</body>
+</html>
